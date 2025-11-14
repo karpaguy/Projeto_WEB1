@@ -27,6 +27,7 @@ aside {
     display: flex;
     flex-direction: column;
     background-color: var(--color-sidebar-main);
+    z-index: 1;
 }
 
 header {
@@ -113,11 +114,12 @@ main {
 }
 .area_name {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(0, 0, 0, 0.1); */
     display: flex;
     justify-content: center;
     align-items: center;
     height: var(--headers-sizes);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
 }
 
 
