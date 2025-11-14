@@ -29,8 +29,6 @@ aside {
     background-color: var(--color-sidebar-main);
 }
 
-
-
 header {
     display: flex;
     flex-direction: row;
@@ -46,7 +44,7 @@ header>h1 {
     font-family: "Caudex", serif;
     font-weight: 700;
     font-size: 28px;
-    color: #fff;
+    color: #72E977
 }
 
 nav {
@@ -69,20 +67,34 @@ button.opt {
 }
 button.opt:hover{
     background-color: var(--color-button-hover);
-    color: white;
+
 }
-button.opt:hover img {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(11%) saturate(7477%) hue-rotate(248deg) brightness(113%) contrast(115%);
-}
+
 .icon_option {
     width: 32px;
 }
 button span {
+    color: white;
     line-height: auto;
 }
 button img.arrow-short {
     width: 22px;
     margin-left: auto;
+}
+.submenu {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+}
+.submenu li {
+    color: black;
+    margin: 8px;
+    border-bottom: 1px solid black;
+    border-bottom-style: dotted;
+}
+.submenu li:hover {
+    color: blue;
 }
 
 .hidden {
