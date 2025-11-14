@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Farmacêutico</title>
+    <title>TEMPLATE</title>
+
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+
 </head>
 <body>
+    <aside>
+        <header>
+            <a href="#"><img src="./assets/img/bird-scepter.png" alt="" class="logo"></a>
+            <h1 id="title_text">O APOTECÁRIO</h1>
+        </header>
+
+        <nav><ul class="options">
+            <li class="dropdown" id="pacientes">
+                <button class="opt">
+                    <img src="" alt="" class="icon_option-pacientes">
+                    <span>PACIENTES</span>
+                    <img src="" alt="Abrir submenu">
+                </button>
+                <ul class="submenu">
+                    <li><a href="#">Listar</a></li>
+                    <li><a href="#">Cadastrar</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" id="medicos">
+                <button class="opt">
+                    <img src="" alt="" class="icon_option-medicos">
+                    <span>MÉDICOS</span>
+                    <img src="" alt="Abrir submenu">
+                </button>
+                <ul class="submenu">
+                    <li><a href="#">Listar</a></li>
+                    <li><a href="#">Cadastrar</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" id="add_consulta">
+                <button class="opt">
+                    <img src="" alt="" class="icon_option-add_consulta">
+                    <span>ADD CONSULTA</span>
+                </button>
+            </li>
+
+            <li class="dropdown" id="sobre">
+                <button class="opt">
+                    <img src="" alt="" class="icon_option-sobre">
+                    <span>SOBRE</span>
+                </button>
+            </li>
+        </ul></nav>
+    </aside>
     
+    <main>        
+        <section id="content_display">
+            <img src="./assets/img/bird-scepter.png" alt="" class="logo">
+            <p>Boas-vindas ao Apotecário</p>
+            <p class="quote">
+                <span>Os homens devem saber que do cérebro, e só do cérebro, derivam prazer, alegria, riso e divertimento, assim como tristeza, pena, dor e medo."</span> - Hipócrates
+            </p>
+            <p class="system_version">0.1</p>
+        </section>
+    </main>
 </body>
 </html>
