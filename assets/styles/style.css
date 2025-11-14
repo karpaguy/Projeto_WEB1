@@ -1,27 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --color-sidebar-main: #1E6262;
+    --color-sidebar-secondary: #3C8D8D;
+    --color-accent: #4FBDBA;
+    --color-main-bg: #F0F7F4;
+    --color-text: #1B1C1E;
+    --color-button: rgb(27, 88, 88);;
+    --color-button-hover: #4FBDBA;
+}
+
+* {
+    font-family: "Varela Round", sans-serif;
+}
+
 body {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 280px 1fr;
 }
 
 aside {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--color-sidebar-main);
 }
 
 
+
 header {
-    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    padding: 8px 6px;
+    gap: 8px;
 }
 header>a>img {
     width: 36px;
 }
+header>h1 {
+    font-family: "Caudex", serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #fff;
+}
 
 nav {
-    background-color: aquamarine;
+    background-color: var(--color-sidebar-secondary);
     flex-grow: 1;
+}
+button.opt {
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-button);
+
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 10px;
+}
+button.opt:hover{
+    background-color: var(--color-button-hover);
+}
+.icon_option {
+    width: 32px;
+}
+
+.hidden {
+    display: none;
 }
 
 main {
-    background-color: red;
+    background-color: var(--color-main-bg)
 }
+
+
