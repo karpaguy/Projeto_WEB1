@@ -10,7 +10,7 @@ async function fetchPacientes(url) {
 }
 
 async function fetchConsultasEspecifica(url, id) {
-    const resposta = await fetch(`${url}/consultas/${id}`)
+    const resposta = await fetch(`${url}consultas/${id}`)
 
     if (!resposta.ok) throw new Error("Erro ao buscar.");
 
