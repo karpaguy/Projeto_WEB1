@@ -36,3 +36,10 @@ Object.values(PAGE_ELEMENTS.menu_options).forEach( (value) => {
         setDropState(value);
     }
 })
+
+// ========
+
+const listarPaciente = document.querySelector("#pacientes .submenu li");
+listarPaciente.addEventListener("click", () => {
+    
+})

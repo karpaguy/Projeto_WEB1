@@ -89,7 +89,7 @@ button img.arrow-short {
     padding: 10px;
 }
 .submenu li {
-    color: black;
+    color: var(--color-text);
     margin: 8px;
     border-bottom: 1px solid black;
     border-bottom-style: dotted;
