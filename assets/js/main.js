@@ -53,13 +53,10 @@ Object.values(PAGE_ELEMENTS.menu_options).forEach( (value) => {
 
 // ======== SUBMENU_PACIENTES
 // ======== LISTAR()
-function verConsultasPaciente(id) {
-
-}
 
 const listarPaciente = document.querySelector("#pacientes .submenu li");
 listarPaciente.addEventListener("click", async () => {
-    const dados = await fetchPacientes(`${URL}pacientes`);
+    const dados = await fetchPacientes(`${URL}`);
     const tbody = document.createElement("tbody");
     // p → paciente.
     dados.forEach(p => {
@@ -91,8 +88,12 @@ listarPaciente.addEventListener("click", async () => {
         const deleteBtn = document.createElement("button");
         deleteBtn.classList.add("btn", "btn-danger");
         deleteBtn.innerText = "🗑 Deletar";
-        deleteBtn.addEventListener("click", () => {
-            console.log(`DELETE! ${p.id}`)
+        deleteBtn.addEventListener("click", async () => {
+            if (confirm(`Tem certeza que deseja excluir o paciente ${p.nome}?`)) {
+                await removerPaciente(p.id);
+
+                listarPaciente.click();
+            }
         })
 
         actionsTd.append(infoBtn, editBtn, deleteBtn);
