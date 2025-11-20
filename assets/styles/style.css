@@ -1,27 +1,55 @@
+/* ===============================
+   1. IMPORTS
+================================ */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
+/* ===============================
+   2. VARIÁVEIS
+================================ */
 :root {
     --color-sidebar-main: #1E6262;
     --color-sidebar-secondary: #2F7E7C;
     --color-accent: #4FBDBA;
+
     --color-main-bg: #F0F7F4;
     --color-text: #1B1C1E;
+
     --color-button: #2A7A78;
     --color-button-hover: #1E6262;
 
     --headers-sizes: 56px;
 }
 
+
+/* ===============================
+   3. RESET / GLOBAL
+================================ */
 * {
     font-family: "Varela Round", sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     display: grid;
     grid-template-columns: 280px 1fr;
+    margin: 0;
 }
 
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: blue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+/* ===============================
+   4. SIDEBAR
+================================ */
 aside {
     min-height: 100vh;
     display: flex;
@@ -30,81 +58,82 @@ aside {
     z-index: 1;
 }
 
+/* ===== Header do MENU ===== */
 header {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: var(--headers-sizes);
     gap: 8px;
-}
-header>a>img {
-    width: 36px;
-}
-header>h1 {
-    font-family: "Caudex", serif;
-    font-weight: 700;
-    font-size: 28px;
-    color: #72E977
+    height: var(--headers-sizes);
 }
 
+header > a > img {
+    width: 36px;
+}
+
+header > h1 {
+    font-family: "Caudex", serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #72E977;
+}
+
+/* ===== Navegação ===== */
 nav {
     background-color: var(--color-sidebar-secondary);
     flex-grow: 1;
 }
+
+/* Botões do menu */
 button.opt {
-    border: none;
     width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    gap: 8px;
+
     background-color: var(--color-button);
+    color: white;
 
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-text);
     padding: 10px;
-    gap: 8px;
 }
-button.opt:hover{
-    background-color: var(--color-button-hover);
 
+button.opt:hover {
+    background-color: var(--color-button-hover);
 }
 
 .icon_option {
     width: 32px;
 }
-button span {
-    color: white;
-    line-height: auto;
-}
+
 button img.arrow-short {
     width: 22px;
     margin-left: auto;
 }
+
+/* Submenu */
 .submenu {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     margin: 10px;
     padding: 10px;
 }
+
 .submenu li {
+    margin: 8px 0;
     color: var(--color-text);
-    margin: 8px;
-    border-bottom: 1px solid black;
-    border-bottom-style: dotted;
+    border-bottom: 1px dotted black;
 }
+
 .submenu li:hover {
     color: blue;
 }
 
-.hidden {
-    display: none;
-}
-.rotate {
-    transform: rotate(90deg);
-}
 
+/* ===============================
+   5. MAIN
+================================ */
 main {
     background-color: var(--color-main-bg);
     display: flex;
@@ -112,32 +141,97 @@ main {
     align-items: center;
     gap: 3rem;
 }
+
+/* Área do título da seção */
 .area_name {
     width: 100%;
-    /* background-color: rgba(0, 0, 0, 0.1); */
+    height: var(--headers-sizes);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: var(--headers-sizes);
+
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Área de conteúdo */
 .display {
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    width: 90%;
 }
+
 .display p {
     max-width: 400px;
 }
 
+
+/* ===============================
+   6. IMAGENS / ÍCONES
+================================ */
 img.logo {
-    filter: brightness(0) saturate(100%) invert(84%) sepia(34%) saturate(555%) hue-rotate(79deg) brightness(93%) contrast(93%);
+    filter: brightness(0) saturate(100%) invert(84%) sepia(34%) 
+            saturate(555%) hue-rotate(79deg) brightness(93%) contrast(93%);
 }
+
 main section img.logo {
     width: 30%;
 }
 
+
+/* ===============================
+   7. UTILIDADES
+================================ */
+.hidden {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+
+/* ===============================
+   8. MODAL (padronizado e comentado)
+================================ */
+/*
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.modal_container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    width: 800px;
+    max-width: 100%;
+
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 5px;
+
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+}
+*/
