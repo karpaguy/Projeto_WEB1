@@ -41,8 +41,6 @@ button {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    background-color: blue;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
@@ -169,6 +167,91 @@ main {
 
 
 /* ===============================
+   5.1. SECTION TABLE
+================================ */
+td {
+    padding: 0 6px;
+}
+
+.danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+.danger:hover {
+    background-color: #b02a37;
+}
+
+.warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+.warning:hover {
+    background-color: #e0a800;
+}
+
+.info {
+    background-color: #17a2b8; /* azul piscina */
+    color: #fff;
+}
+.info:hover {
+    background-color: #117a8b;
+}
+
+.info, .warning {
+    margin-right: 8px;
+}
+
+/* ===============================
+   7. UTILIDADES
+================================ */
+
+.cadastro_container {
+    max-width: 420px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+}
+
+.cadastro_container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+
+.btn_cadastrar {
+    padding: 10px 20px;
+    background-color: #4a5bdc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn_cadastrar:hover {
+    background-color: #3c4cc0;
+}
+
+
+/* ===============================
    6. IMAGENS / ÍCONES
 ================================ */
 img.logo {
@@ -196,42 +279,41 @@ main section img.logo {
 /* ===============================
    8. MODAL (padronizado e comentado)
 ================================ */
-/*
 .modal_container {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100vw;
     height: 100vh;
-
-    display: flex;
-    align-items: center;
+    background: rgba(0, 0, 0, 0.55);
+    display: none; /* padrão = escondido */
     justify-content: center;
-
-    background-color: rgba(0, 0, 0, 0.3);
-
-    pointer-events: none;
-    opacity: 0;
-    transition: 0.2s ease;
-}
-
-.modal_container.show {
-    pointer-events: auto;
-    opacity: 1;
+    align-items: center;
+    z-index: 9999;
 }
 
 .modal {
-    width: 800px;
-    max-width: 100%;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
 
-    background-color: #fff;
-    padding: 30px 50px;
-    border-radius: 5px;
-
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
-
+.modal_content {
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
-*/
+
+.close_modal {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}

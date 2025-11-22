@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./assets/styles/reset.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
 
+    <script src="./assets/js/api.js" defer></script>
     <script src="./assets/js/paciente.js" defer></script>
+    <script src="./assets/js/medicos.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
 </head>
 <body>
@@ -38,8 +40,8 @@
                     <img src="./assets/img/svg/arrow-right-short.svg" alt="" class="arrow-short">
                 </button>
                 <ul class="submenu hidden">
-                    <li>Listar</li>
-                    <li>Cadastrar</li>
+                    <li id="listar_medicos">Listar</li>
+                    <li id="cadastrar_medicos">Cadastrar</li>
                 </ul>
             </li>
 
@@ -64,13 +66,23 @@
             <h2>ÁREA PRINCIPAL (PLACEHOLDER)</h2>
         </div>
         <section class="display" id="content_display_main">
-            <!-- <img src="./assets/img/bird-scepter.png" alt="" class="logo">
+            <img src="./assets/img/bird-scepter.png" alt="" class="logo">
             <p>Boas-vindas ao Apotecário</p>
             <p class="quote">
                 <span>Os homens devem saber que do cérebro, e só do cérebro, derivam prazer, alegria, riso e divertimento, assim como tristeza, pena, dor e medo."</span> - Hipócrates
             </p>
-            <p class="system_version">Versão 0.1</p> -->
+            <p class="system_version">Versão 0.1</p>
         </section>
+
+    <div class="modal_container" id="modal_container">
+        <div class="modal">
+            <button class="close_modal" id="close_modal">&times;</button>
+
+            <div class="modal_content" id="modal_content">
+                <!-- Conteúdo será injetado aqui via JS -->
+            </div>
+        </div>
+    </div>
     </main>
 </body>
 </html>
